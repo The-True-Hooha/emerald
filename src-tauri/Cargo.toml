@@ -5,7 +5,7 @@ description = "emerald, your obsidian replica"
 authors = ["thetruehooha"]
 license = ""
 repository = "https://github.com/The-True-Hooha/emerald"
-default-run = "app"
+default-run = "emerald"
 edition = "2021"
 rust-version = "1.59"
 

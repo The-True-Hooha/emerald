@@ -18,7 +18,7 @@ syncs notes between devices using iCloud, Dropbox, OneDrive
 add suggestions for texts/markdown support
 keyboard shortcuts access
 export feature to pdf, word etc...
-allow users adjust font sizes (preview, writing view mode, codeblocks and other different text category)
+allow users adjust font sizes types (preview, writing view mode, codeblocks and other different text category)
 display options, sort of the way obsidian handles graphs
 side bar for folder structure
 search bar to search for files
