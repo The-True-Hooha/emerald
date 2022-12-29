@@ -1,7 +1,7 @@
 {
   "build": {
     "beforeBuildCommand": "npm run build &amp;&amp; npm run export",
-    "beforeDevCommand": "npm run dev",
+    "beforeDevCommand": "cross-env BROWSER=none npm run dev",
     "devPath": "http://localhost:3000",
     "distDir": "../out"
   },
@@ -11,7 +11,18 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "clipboard": {
+        "all": false,
+        "readText": false,
+        "writeText": false
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "center": false,
+        "setDecorations": false
+      }
     },
     "bundle": {
       "active": true,
@@ -58,7 +69,8 @@
         "height": 600,
         "resizable": true,
         "title": "emerald",
-        "width": 800
+        "width": 800,
+        "decorations": false
       }
     ]
   }
