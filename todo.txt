@@ -2,9 +2,13 @@ TODO: tasks are in particularly no order of priority(at least for now)
 
 get started ---- done
 set dev preview to app interface instead of web browser view --- done
-create loading screen -- in progress
-update readme
-create home layout
+update readme -- done
+
+create title bar to appear in layout on all pages
+
+
+create home layout -- in progress
+add custom title bar
 create app icon
 enable text editor access
 enable markdown access
@@ -12,6 +16,7 @@ multi platform usage
 access to store texts to local storage computer device
 create text/markdown live preview
 multiple ways to organize notes, look into it
+create loading screen
 theme functionality and plugins too
 collaborations on text documents
 documentation, and easy use to get stared for new users
