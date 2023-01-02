@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useInterval } from '@mantine/hooks';
 import windowIcon from "../../src-tauri/icons/32x32.png";
-import { VscChromeMinimize, VscChromeMaximize, VscChromeRestore } from 'react-icons/vsc'
+import { VscChromeMinimize, VscChromeMaximize, VscChromeRestore, VscChromeClose } from 'react-icons/vsc';
 
 
 export default function TitleBar(){
@@ -20,7 +20,7 @@ export default function TitleBar(){
     useEffect(() => {
         tauriWindow.start()
         return tauriWindow.stop
-    }, )
+    }, [tauriWindow])
 
     return !windowFullScreen && <div data-tauri-drag-region className='h-[30px] bg-neutral-800 flex justify-between fixed select-none top-0 left-0 right-0 z-[1000px]'>
         <div>
@@ -42,7 +42,10 @@ export default function TitleBar(){
             </div> : 
             <div title='maximize' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[30px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.toggleMaximize()}>
                 <VscChromeMaximize className='align-middle'/>
-                </div>}
+            </div>}
+            <div title='close' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[30px] hover:bg-gray-400 active:bg-slate-50' >
+                <VscChromeClose className='align-middle'/>
+            </div>
         </div>
     </div>
 }
