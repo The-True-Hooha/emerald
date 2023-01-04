@@ -8,7 +8,7 @@ export default function Navbar(){
             <nav>
                 
                 <div className="pr-[20px]">
-                    <ul className="hidden md:flex lg:pl-[150px] font-oxygen text-[#344e41] text-[17px]">
+                    <ul className="hidden md:flex lg:pl-[150px] font-oxygen text-white text-[17px]">
                         <li className="md:ml-16 cursor-pointer">
                             <Link href="/">
                                 Home
