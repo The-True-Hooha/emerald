@@ -20,30 +20,30 @@ export default function CustomTitleBar(){
         return tauriWindow.stop
     }, [])
 
-    return !windowFullscreen && <div data-tauri-drag-region className='h-[30px] bg-neutral-800 flex justify-between fixed select-none top-0 left-0 right-0 z-[1000px]'>
+    return !windowFullscreen && <div data-tauri-drag-region className='h-[30px] bg-black flex justify-between fixed select-none top-0 left-0 text-white right-0 z-[1000px]'>
         <div>
             {/* app icon */}
-            <img className='cursor-default ml-5 align-bottom' height={16} src={appIcon} alt="tauri app icon"/>
+            <img className='cursor-default ml-5 mt-1 w-[23px] align-bottom' height={15} src={appIcon} alt="tauri app icon"/>
         </div>
         <div data-tauri-drag-region inline className='text-xs inline ml-5 leading-[30px]'>
             {title}
         </div>
         {/* //todo: add app dialog boc */}
         {/* window icons */}
-        <div>
-            <div title='minimize' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[30px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.minimize()}>
-                <VscChromeMinimize title='minimize' className='align-middle'/>
+        <div className='h-full items-center'>
+            <div title='minimize' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[28px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.minimize()}>
+                <VscChromeMinimize title='minimize' className='align-middle cursor-pointer'/>
             </div>
             {maximizeScreen ? 
-            <div title='restore down' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[30px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.maximize()}>
-                <VscChromeRestore className='align-middle'/>
+            <div title='restore down' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[28px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.maximize()}>
+                <VscChromeRestore className='align-middle cursor-pointer'/>
             </div> : 
-            <div title='maximize' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[30px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.toggleMaximize()}>
-                <VscChromeMaximize className='align-middle'/>
+            <div title='maximize' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[28px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.toggleMaximize()}>
+                <VscChromeMaximize className='align-middle cursor-pointer'/>
             </div>    
         }
-            <div title='close' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[30px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.close()}>
-                <VscChromeClose className='align-middle'/>
+            <div title='close' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[28px] hover:bg-red-600 active:bg-slate-50' onClick={() => appWindow.close()}>
+                <VscChromeClose className='align-middle cursor-pointer'/>
             </div>
         </div>
     </div>
