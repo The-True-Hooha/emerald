@@ -3,7 +3,7 @@
     "beforeBuildCommand": "npm run build &amp;&amp; npm run export",
     "beforeDevCommand": " cross-env BROWSER=none npm run dev",
     "devPath": "http://localhost:5173",
-    "distDir": "../dist"
+    "distDir": "../build"
   },
   "package": {
     "productName": "emerald",
