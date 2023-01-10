@@ -1,9 +1,9 @@
 {
   "build": {
     "beforeBuildCommand": "npm run build &amp;&amp; npm run export",
-    "beforeDevCommand": "cross-env BROWSER=none npm run dev",
-    "devPath": "http://localhost:3000",
-    "distDir": "../out"
+    "beforeDevCommand": " cross-env BROWSER=none npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../build"
   },
   "package": {
     "productName": "emerald",
@@ -11,7 +11,7 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": true,
       "clipboard": {
         "all": false,
         "readText": false,
