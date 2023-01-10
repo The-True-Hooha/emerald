@@ -5,11 +5,11 @@ import { appWindow } from '@tauri-apps/api/window'
 import { useTauri } from './utils/providers'
 import { useEffect, useState } from 'react'
 import { useInterval } from '@mantine/hooks'
-import { tauri } from '@tauri-apps/api'
+//import { tauri } from '@tauri-apps/api'
 
 
 
-export function App() {
+export default function App() {
 
   const { osType } = useTauri();
   useEffect(() => {
@@ -30,15 +30,7 @@ export function App() {
 
 const useCustomTitleBar = !fullscreen && osType === 'Windows_NT' && WIN_CUSTOM_TITLE_BAR;
 
-  return <>
-    {useCustomTitleBar && <CustomTitleBar/>}
-    <div className={'overflow-hidden mt' && useCustomTitleBar ? 100 : 70}/>
-    <div className={useCustomTitleBar ? 'mt-2' : ''} >
-      <header data-tauri-drag-region className={`flex items-center h-full` + (useCustomTitleBar ? 'max-h-fit' : '')}></header>
-      <text>{appTitle}</text>
-    </div>
+  return <div>
     <CustomTitleBar/>
-  </>
+  </div>
 }
-
-export default App
