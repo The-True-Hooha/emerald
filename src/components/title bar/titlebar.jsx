@@ -1,7 +1,7 @@
 import { appWindow } from '@tauri-apps/api/window'
 import { useState, useEffect } from 'react'
 import { useInterval } from '@mantine/hooks'
-import appIcon from '../../../../src-tauri/icons/32x32.png';
+import appIcon from '../../../src-tauri/icons/32x32.png'
 import { VscChromeMinimize, VscChromeMaximize, VscChromeRestore, VscChromeClose } from 'react-icons/vsc'
 
 export default function CustomTitleBar(){
@@ -30,7 +30,7 @@ export default function CustomTitleBar(){
         </div>
         {/* //todo: add app dialog boc */}
         {/* window icons */}
-        <div className='h-full items-center'>
+        <div data-tauri-drag-region className='h-full items-center'>
             <div title='minimize' className='duration-200 inline-flex justify-center align-middle w-[46px] h-[28px] hover:bg-gray-400 active:bg-slate-50' onClick={() => appWindow.minimize()}>
                 <VscChromeMinimize title='minimize' className='align-middle cursor-pointer'/>
             </div>
